@@ -1,5 +1,6 @@
 var N94AP_13G37 = 0x0;
 var N78AP_13G36 = 0x1;
+var P105AP_13G36 = 0x2;
 
 var build_for = N94AP_13G37;
 
@@ -21,6 +22,14 @@ if (build_for == N94AP_13G37) {
 	var pthread_join = 0x20636af4 | 1;
 	var add_sp_0x3c = 0x23d72b5a | 1;
 	var NDR_record = 0x364d200c;
+} else if (build_for == P105AP_13G36) {
+	var __stack_chk_fail_lazy_addy = 0x347f7c48;
+	var __stack_chk_fail_resolver = 0x23d751fc;
+	var gettimeofday_lazy_addy = 0x347f7d3c;
+	var atan2_lazy_addy = 0x347f7c84;
+	var pthread_exit = 0x20633048 | 1;
+	var pthread_join = 0x20636af4 | 1;
+	var add_sp_0x3c = 0x23d72b5a | 1;
 }
 var reserve_addr = 0x1a0000;
 var sym_cache = {};
